@@ -1,4 +1,4 @@
-"use strict";
+" use strict";
 
 // // a = 10; при использовании "use strict" невозможно объяление переменной без синтаксиса let или const;
 // console.log(1);
@@ -97,29 +97,34 @@
 
 // const isChecked = true,
 //     isClose = false;
-// // console.log(isChecked || isClose);
+// // // console.log(isChecked || isClose);
 
-// const isChecked = false,
-//     isClose = false;
-// console.log(isChecked || !isClose); // оператор ! (меняет значение не противоположное);
+// // const isChecked = false,
+// //     isClose = false;
+// // console.log(isChecked || !isClose); // оператор ! (меняет значение не противоположное);
 
 
-// console.log(2 + 2 * 2 !== "6");
+// // console.log(2 + 2 * 2 !== "6");
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", ""); //1;
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", ""); //1;
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
 
-}; //2
-const a = prompt("Один из последних просмотренных фильмов?", ""),
-    b = prompt("На сколько оцените его?", ""),
-    c = prompt("Один из последних просмотренных фильмов?", ""),
-    d = prompt("На сколько оцените его?", "");
+// }; //2
+// const a = prompt("Один из последних просмотренных фильмов?", ""),
+//     b = prompt("На сколько оцените его?", ""),
+//     c = prompt("Один из последних просмотренных фильмов?", ""),
+//     d = prompt("На сколько оцените его?", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB);
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+// console.log(personalMovieDB);
+if (4 == 4) {
+    console.log("ok!");
+} else {
+    console.log("Error!"); //условия if ;
+}
