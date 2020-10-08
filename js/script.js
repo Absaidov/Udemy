@@ -122,12 +122,12 @@
 
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
-// console.log(personalMovieDB);
-if (4 == 4) {
-    console.log("ok!");
-} else {
-    console.log("Error!"); //условия if ;
-}
+// // console.log(personalMovieDB);
+// if (4 == 4) {
+//     console.log("ok!");
+// } else {
+//     console.log("Error!"); //условия if ;
+// }
 
 
 //Первый вариант кода условий if 
@@ -179,12 +179,48 @@ if (4 == 4) {
 // for (i = 1; i < 8; i++) {
 //     console.log(num);
 //     num++
-// }
+// // }
 
-for (i = 1; i < 10; i++) {
-    if (i === 6) {
-        // break;// прервать
-        continue; //продолжить циклы
-    }
-    console.log(i);
+// for (i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         // break;// прервать
+//         continue; //продолжить циклы
+//     }
+//     console.log(i);
+// };
+//УРОК 15
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из последних просмотренных фильмов?", ""),
+        b = prompt("На сколько оцените его?", "");
+
+        if(a != null && b != null && a != "" && b != "" &&  a.length < 50 && b.length < 50){
+        personalMovieDB.movies[a] = b;
+        console.log("DONE! ");
+        } else {
+            console.log("ERROR");
+            i--; 
+        }
+} 
+if(personalMovieDB.count < 10){
+    console.log("Просмотрено мало фильмов");
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30){
+    console.log("Среднее количество фильмов!");
+} else if (personalMovieDB.count >= 30) {
+    console.log("Вы киноман");
+} else {
+    console.log("ОШИБКА");
 }
+console.log(personalMovieDB); 
+
+
+
