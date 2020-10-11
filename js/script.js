@@ -187,40 +187,73 @@
 //         continue; //продолжить циклы
 //     }
 //     console.log(i);
+// // };
+// //УРОК 15
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
 // };
-//УРОК 15
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt("Один из последних просмотренных фильмов?", ""),
+//         b = prompt("На сколько оцените его?", "");
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?", ""),
-        b = prompt("На сколько оцените его?", "");
+//         if(a != null && b != null && a != "" && b != "" &&  a.length < 50 && b.length < 50){
+//         personalMovieDB.movies[a] = b;
+//         console.log("DONE! ");
+//         } else {
+//             console.log("ERROR");
+//             i--; 
+//         }
+// } 
+// if(personalMovieDB.count < 10){
+//     console.log("Просмотрено мало фильмов");
+// } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30){
+//     console.log("Среднее количество фильмов!");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Вы киноман");
+// } else {
+//     console.log("ОШИБКА");
+// }
+// console.log(personalMovieDB); 
 
-        if(a != null && b != null && a != "" && b != "" &&  a.length < 50 && b.length < 50){
-        personalMovieDB.movies[a] = b;
-        console.log("DONE! ");
-        } else {
-            console.log("ERROR");
-            i--; 
-        }
-} 
-if(personalMovieDB.count < 10){
-    console.log("Просмотрено мало фильмов");
-} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30){
-    console.log("Среднее количество фильмов!");
-} else if (personalMovieDB.count >= 30) {
-    console.log("Вы киноман");
-} else {
-    console.log("ОШИБКА");
-}
-console.log(personalMovieDB); 
+// let num = 20;
+// function showFirstMessage(text){
+//     console.log(text);
+//     num = 10;
+// }
+// showFirstMessage("Hello World!");
+// console.log(num);
 
+// function calc (a,b){
+//     return(a + b);
+// }
+// // console.log(calc(10, 15));
+// // console.log(calc(20, 15));
+// // console.log(calc(30, 15));
+
+// function ret(){
+
+//     let num = 50;
+
+//     return num;
+// }
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function(){
+//     console.log("Hello!")
+// };
+
+// logger(); 
+
+const calc = (a, b) => a + b;
+ 
+console.log(calc(15, 20));
 
 
