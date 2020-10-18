@@ -383,3 +383,32 @@
 // }
 
 // console.log(counter);
+
+
+const arr = [1, 22, 13, 36, 0.8];
+arr.sort(compareNum);
+console.log(arr);
+ function compareNum(a, b){
+     return a - b;
+ }
+// arr.forEach(function(item, i, arr ){
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+// // arr.pop(); // удаление последнего элемента массива
+// // arr.push(16); //добавление элемента в конец массива;
+// // console.log(arr);
+ 
+// // for (i = 0; i < arr.length; i++){
+// //     console.log(arr[i]);
+// // }
+
+// for( let value of arr){
+//     console.log(value);
+// } // аналог цикла вышенаписанного
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// // console.log(products);
+//  products.sort();
+// console.log(products.join('; '));
+
