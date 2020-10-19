@@ -385,18 +385,18 @@
 // console.log(counter);
 
 
-const arr = [1, 22, 13, 36, 0.8];
-arr.sort(compareNum);
-console.log(arr);
- function compareNum(a, b){
-     return a - b;
- }
-// arr.forEach(function(item, i, arr ){
-//     console.log(`${i}: ${item} внутри массива ${arr}`);
-// });
-// // arr.pop(); // удаление последнего элемента массива
-// // arr.push(16); //добавление элемента в конец массива;
-// // console.log(arr);
+// const arr = [1, 22, 13, 36, 0.8];
+// arr.sort(compareNum);
+// console.log(arr);
+//  function compareNum(a, b){
+//      return a - b;
+//  }
+// // arr.forEach(function(item, i, arr ){
+// //     console.log(`${i}: ${item} внутри массива ${arr}`);
+// // });
+// // // arr.pop(); // удаление последнего элемента массива
+// // // arr.push(16); //добавление элемента в конец массива;
+// // // console.log(arr);
  
 // // for (i = 0; i < arr.length; i++){
 // //     console.log(arr[i]);
@@ -412,3 +412,72 @@ console.log(arr);
 //  products.sort();
 // console.log(products.join('; '));
 
+
+function copy (mainObj){
+    let copyObj = {};
+    let key;
+    for(key in mainObj) {
+        copyObj[key] = mainObj[key];
+    }
+
+    return copyObj;
+}
+
+const numbers = {
+    a: 5,
+    b: 2,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+// console.log(newNumbers);
+// console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 20,
+};
+// console.log(Object.assign(numbers, add)); 
+const clone = Object.assign({}, add);
+clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+const oldArray = ["a","b","c"];
+const newArray = oldArray.slice();
+newArray[1] = "asdasd";
+console.log(newArray);
+console.log(oldArray);
+
+const video = ["youtube", 'vimeo', "rutube"],
+      blogs = ["wordpress", "lifejournal", "blogger"],
+      internet = [...video, ...blogs, "vk", "facebook"];
+
+console.log(internet);
+
+function log(a, b, c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    
+}
+
+const num = [2, 5 , 7];
+log(...num);
+
+const array = ["a", "b"];
+const newAarray =  [...array];
+newAarray[0] = "25";
+console.log(newAarray);
+
+const q = {
+    one: 1,
+    two: 2,
+};
+
+const newObj = {...q};
