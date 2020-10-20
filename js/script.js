@@ -408,76 +408,101 @@
 
 // const str = prompt("", "");
 // const products = str.split(", ");
-// // console.log(products);
-//  products.sort();
-// console.log(products.join('; '));
+// // // console.log(products);
+// //  products.sort();
+// // console.log(products.join('; '));
 
 
-function copy (mainObj){
-    let copyObj = {};
-    let key;
-    for(key in mainObj) {
-        copyObj[key] = mainObj[key];
-    }
+// function copy (mainObj){
+//     let copyObj = {};
+//     let key;
+//     for(key in mainObj) {
+//         copyObj[key] = mainObj[key];
+//     }
 
-    return copyObj;
-}
+//     return copyObj;
+// }
 
-const numbers = {
-    a: 5,
-    b: 2,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// const numbers = {
+//     a: 5,
+//     b: 2,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
-const newNumbers = copy(numbers);
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-// console.log(newNumbers);
-// console.log(numbers);
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// // console.log(newNumbers);
+// // console.log(numbers);
 
-const add = {
-    d: 17,
-    e: 20,
-};
-// console.log(Object.assign(numbers, add)); 
-const clone = Object.assign({}, add);
-clone.d = 20;
-// console.log(add);
-// console.log(clone);
+// const add = {
+//     d: 17,
+//     e: 20,
+// };
+// // console.log(Object.assign(numbers, add)); 
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// // console.log(add);
+// // console.log(clone);
 
-const oldArray = ["a","b","c"];
-const newArray = oldArray.slice();
-newArray[1] = "asdasd";
-console.log(newArray);
-console.log(oldArray);
+// const oldArray = ["a","b","c"];
+// const newArray = oldArray.slice();
+// newArray[1] = "asdasd";
+// console.log(newArray);
+// console.log(oldArray);
 
-const video = ["youtube", 'vimeo', "rutube"],
-      blogs = ["wordpress", "lifejournal", "blogger"],
-      internet = [...video, ...blogs, "vk", "facebook"];
+// const video = ["youtube", 'vimeo', "rutube"],
+//       blogs = ["wordpress", "lifejournal", "blogger"],
+//       internet = [...video, ...blogs, "vk", "facebook"];
 
-console.log(internet);
+// console.log(internet);
 
-function log(a, b, c){
-    console.log(a);
-    console.log(b);
-    console.log(c);
+// function log(a, b, c){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
     
-}
+// }
 
-const num = [2, 5 , 7];
-log(...num);
+// const num = [2, 5 , 7];
+// log(...num);
 
-const array = ["a", "b"];
-const newAarray =  [...array];
-newAarray[0] = "25";
-console.log(newAarray);
+// const array = ["a", "b"];
+// const newAarray =  [...array];
+// newAarray[0] = "25";
+// console.log(newAarray);
 
-const q = {
-    one: 1,
-    two: 2,
+// const q = {
+//     one: 1,
+//     two: 2,
+// };
+
+// const newObj = {...q};
+
+// let str = "some";
+// let strObj = new String(str);
+// // console.log(typeof(str));
+// // console.log(typeof(strObj));
+
+// console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log("Hello!");
+    }
 };
 
-const newObj = {...q};
+const john = Object.create(soldier); 
+// const john = {
+//     health: 100
+// };
+
+// john.__proto__ = soldier; //устаревший метод
+Object.setPrototypeOf(john, soldier);
+// console.log(john.armor);
+john.sayHello();
