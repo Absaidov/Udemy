@@ -549,93 +549,120 @@
 // },
 //     showMyDB: function (hidden){
 
-//     if(!hidden) {
-//         console.log(personalMovieDB); 
-//     }
-// },
-//     toggleVisibleMyDB: function(){
-//         if(personalMovieDB.privat){
-//             personalMovieDB.privat = false;
+// //     if(!hidden) {
+// //         console.log(personalMovieDB); 
+// //     }
+// // },
+// //     toggleVisibleMyDB: function(){
+// //         if(personalMovieDB.privat){
+// //             personalMovieDB.privat = false;
 
-//         }else{
-//              personalMovieDB.privat = true;
-//         }
-//     },
-//     writeYoursGenres: function (){
+// //         }else{
+// //              personalMovieDB.privat = true;
+// //         }
+// //     },
+// //     writeYoursGenres: function (){
         
-//     for(let i = 1; i <= 3; i++){
-//         // let genre = prompt(`Ваш любимый жанр под номером ${i}`);
-//         // if(genre === "" || genre === null){
-//         //      console.log("Вы ввели  неккоректные данные");
-//         //      i--;
-//         // } else{
-//         //     personalMovieDB.genres[i - 1] = genre;
-//         // }
-//         // personalMovieDB.genres.forEach((item, i) => {
-//         //     console.log(`любимый жанр ${i + 1} - это название ${item}`);
-//         // });
+// //     for(let i = 1; i <= 3; i++){
+// //         // let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+// //         // if(genre === "" || genre === null){
+// //         //      console.log("Вы ввели  неккоректные данные");
+// //         //      i--;
+// //         // } else{
+// //         //     personalMovieDB.genres[i - 1] = genre;
+// //         // }
+// //         // personalMovieDB.genres.forEach((item, i) => {
+// //         //     console.log(`любимый жанр ${i + 1} - это название ${item}`);
+// //         // });
     
-//         let genre = prompt(`Введите Ваши любимые жанры через запятую`);
-//         if(genre === "" || genre === null){
-//              console.log("Вы ввели  неккоректные данные");
-//              i--;
-//         } else{
-//             personalMovieDB.genres[i - 1] = genre;
-//         }
+// //         let genre = prompt(`Введите Ваши любимые жанры через запятую`);
+// //         if(genre === "" || genre === null){
+// //              console.log("Вы ввели  неккоректные данные");
+// //              i--;
+// //         } else{
+// //             personalMovieDB.genres[i - 1] = genre;
+// //         }
         
-//     }
+// //     }
     
+// // }
+
+
+// // };
+
+
+// // to String
+// // 1)
+
+// console.log(typeof(String(null)));
+// console.log(typeof(String(4)));
+// // 2)
+// // конкодинация
+// // 
+// console.log(typeof(6 + ""));
+// const num = 5;
+// console.log("https://vk.com/catalog/" + num);
+// const fontSize = 26 + 'px';
+
+// // to Number
+// // 1)
+// console.log(typeof(Number('4')));
+
+// // 2)
+// console.log(typeof(+"4"));
+// // 3)
+// console.log(typeof(parseInt('5', 10)));
+
+// let answ = +prompt("Hello!", "");
+
+// // to Boolean
+
+// // 0 , '', null, undefined, NaN; это все значение FALSE, все остальное true  
+
+// // 1)
+// let switcher = null;
+
+// if(switcher){
+//     console.log("working...");
 // }
 
+// switcher = 1;
+// if(switcher){
+//     console.log("working...");
+// }
 
-// };
+// // 2)
+
+// console.log(typeof(Boolean(4)));
+
+// // 3)
+
+// console.log(typeof(!!"4444"));
 
 
-// to String
-// 1)
+// let x = 5; alert( x++ ); будет равна 5, так как унарный плюс стоит после числа, увеличение на 1 будет в дальнейшем использовании;
+// console.log([ ] + false - null + true ); NaN, из за использования не числовых значений;
+// let y = 1; let x = y = 2; alert(x); x = 2;
+// [ ] + 1 + 2; будет равна 12;
+// alert( "1"[0] ) алерт будет равен 1;
+// 2 && 1 && null && 0 && undefined будет равен null, так как null = false, как только первый false попадается в коде то процесс останавливается;
+//И запинается на лжи 
+// ИЛИ запинается на правде;
+// console.log(!!( 1 && 2 ) === (1 && 2)); два знака !! превращают значение в булиновое;
 
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
-// 2)
-// конкодинация
-// 
-console.log(typeof(6 + ""));
-const num = 5;
-console.log("https://vk.com/catalog/" + num);
-const fontSize = 26 + 'px';
+                    // 3
+// alert( null || 2 && 3 || 4 );
 
-// to Number
-// 1)
-console.log(typeof(Number('4')));
+// const a = [1, 2, 3];
+// const b = [1, 2, 3]; 
 
-// 2)
-console.log(typeof(+"4"));
-// 3)
-console.log(typeof(parseInt('5', 10)));
+// // А НЕ РАВНА Б;
 
-let answ = +prompt("Hello!", "");
+// console.log(a == b);
 
-// to Boolean
+// alert( +"Infinity" );будет сообщение Infinity, его значение будет числовым!;
 
-// 0 , '', null, undefined, NaN; это все значение FALSE, все остальное true  
+// console.log("Ёжик" > "яблоко"); будет false;
 
-// 1)
-let switcher = null;
-
-if(switcher){
-    console.log("working...");
-}
-
-switcher = 1;
-if(switcher){
-    console.log("working...");
-}
-
-// 2)
-
-console.log(typeof(Boolean(4)));
-
-// 3)
-
-console.log(typeof(!!"4444"));
-
+// console.log(0 || "" || 2 || undefined || true || falsе );
+// ИЛИ ЗАПИНАЕТСЯ НА ПРАВДЕ
