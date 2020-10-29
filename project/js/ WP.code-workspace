@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Udemy_repo",
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"jshint.options": {
+			"esversion": 6
+		}
+	}
+}
